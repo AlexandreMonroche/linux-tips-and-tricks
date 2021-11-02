@@ -1,0 +1,21 @@
+# ----------
+# Aliases
+
+export EDITOR=nano
+
+# Update Aliases
+alias full-update='sudo apt update && sudo apt full-upgrade -y && sudo apt-get autoclean -y'
+
+# LS Aliases
+alias ls="ls --color=auto"
+alias l="ls -lrth"
+alias ll="l -a"
+
+# Aliases divers
+alias space="df -h /dev/dm-0"
+alias space-folder="du -ach . --max-depth 1"
+alias shred-folder="find . -type f -print0 | xargs -0 shred -fuzv -n 48"
+alias monip="curl ifconfig.co"
+alias history-clear="ln -sf /dev/null ~/.bash_history && history -c"
+alias grep='grep --color'
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
